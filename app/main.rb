@@ -431,7 +431,7 @@ end
 # Called from input when state.inventory_drop
 # is true and a number is pressed
 def handle_inventory_drop args, index
-  if (index + 1) < args.state.player.inventory_size && (index + 1) <= args.state.player.inventory.size
+  if (index + 1) <= args.state.player.inventory_size && (index + 1) <= args.state.player.inventory.size
     if args.state.map[args.state.player.y_pos][args.state.player.x_pos] == 1
       args.state.player.inventory[index].in_inventory = false
       args.state.player.inventory[index].x_pos = args.state.player.x_pos
